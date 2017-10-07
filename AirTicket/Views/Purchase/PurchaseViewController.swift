@@ -13,25 +13,25 @@ class PurchaseViewController: BaseViewController {
 
     // MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
-    
+
     // MARK: - Properties(Private)
     fileprivate let directionsCell = "DirectionsTableViewCell"
     fileprivate let datesCell = "DatesTableViewCell"
     fileprivate let passangersCell = "PassangersTableViewCell"
     fileprivate let ticketsSegue = "ticketsSegue"
     fileprivate let citiesSegue = "citiesSegue"
-    
+
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupTableView()        
+        setupTableView()
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         let navVc = self.navigationController as! BaseNavigationController
         navVc.setupNavBar(mode: .defaultMode)
     }
-    
+
     private func setupTableView() {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 360
@@ -45,7 +45,7 @@ class PurchaseViewController: BaseViewController {
         tableView.register(UINib(nibName: passangersCell, bundle: nil),
                            forCellReuseIdentifier: passangersCell)
     }
-    
+
     // MARK: - Actions
     @IBAction func findTicketsAction(_ sender: Any) {
         let origin = Defaults[.originCity]
@@ -53,7 +53,7 @@ class PurchaseViewController: BaseViewController {
         let tempPurchase = PurchaseRecord(origin: origin, destination: destination, departDate: "asdasd", returnDate: "dasdasd", adults: 1, kids: 0, babies: 0)
         performSegue(withIdentifier: ticketsSegue, sender: tempPurchase)
     }
-    
+
 }
 
 // Navigation
@@ -71,17 +71,17 @@ extension PurchaseViewController {
 }
 
 extension PurchaseViewController: UITableViewDelegate, UITableViewDataSource {
-    
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+
         switch indexPath.row {
         case 0:
             let directionCell = tableView.dequeueReusableCell(withIdentifier: directionsCell,
@@ -89,7 +89,7 @@ extension PurchaseViewController: UITableViewDelegate, UITableViewDataSource {
             directionCell.delegate = self
             directionCell.originCity = Defaults[.originCity] ?? "Откуда"
             directionCell.destinationCity = Defaults[.destinationCity] ?? "Kуда"
-            
+
             return directionCell
         case 1:
             let dateCell = tableView.dequeueReusableCell(withIdentifier: datesCell,

@@ -9,7 +9,7 @@
 import Darwin
 
 public extension Array {
-    
+
     /**
      Returns a random element from the array. Can be used to create a playful
      message that cycles randomly through a set of emoji icons, for example.

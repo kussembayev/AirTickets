@@ -9,33 +9,33 @@
 import UIKit
 
 class BaseViewController: UIViewController {
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.bg()
         self.makeBackWithoutText()
     }
-    
+
     override func viewDidAppear(_ animated: Bool) {
         self.setNeedsStatusBarAppearanceUpdate()
     }
-    
+
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-    
+
     func startLoader() {
-        
+
     }
-    
+
     func startSuccesLoader() {
-        
+
     }
-    
+
     func stopLoader() {
-        
+
     }
-    
+
     // MARK: - UI Helpers
 //    func showAlertDialog(_ title: String?, message: String?) {
 //        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -45,7 +45,7 @@ class BaseViewController: UIViewController {
 //        alert.addAction(ok)
 //        self.present(alert, animated: true, completion: { _ in })
 //    }
-    
+
 //    func showErrorMessage(message: String) {
 //        let errorView = MessageView.viewFromNib(layout: .MessageView)
 //
@@ -76,20 +76,20 @@ class BaseViewController: UIViewController {
 //        errorView.button?.isHidden = true
 //        SwiftMessages.show(view: errorView)
 //    }
-    
+
     // MARK: - Navigation
     func backTransitionNotification() {
-        
+
     }
-    
+
     func showedBecauseOfBackTransition() {
-        
+
     }
-    
+
     func closeAction(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-    
+
     func backAction(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }

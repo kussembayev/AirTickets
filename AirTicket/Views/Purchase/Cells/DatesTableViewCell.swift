@@ -18,10 +18,10 @@ class DatesTableViewCell: UITableViewCell {
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var departureDateView: UIView!
     //Date of arrival
-    
+
     // MARK: - Properties(Public)
     weak var delegate: DatesTableViewCellDelegate?
-    
+
     // MARK: - Lifecycle
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,17 +31,17 @@ class DatesTableViewCell: UITableViewCell {
         _ = bgView.addBorder(edges: [.bottom], colour: UIColor.white.withAlphaComponent(0.25), thickness: 1)
         setupTapGestures()
     }
-    
+
     private func setupTapGestures() {
         let departureTap = UITapGestureRecognizer(target: self, action: #selector(self.showCalendar(_:)))
         departureDateView.isUserInteractionEnabled = true
         departureDateView.addGestureRecognizer(departureTap)
-        
+
 //        let destinationTap = UITapGestureRecognizer(target: self, action: #selector(showCalendar(_:)))
 //        destinationView.isUserInteractionEnabled = true
 //        destinationView.addGestureRecognizer(destinationTap)
     }
-    
+
     @objc private func showCalendar(_ sender: UITapGestureRecognizer) {
         delegate?.showCalendar()
     }

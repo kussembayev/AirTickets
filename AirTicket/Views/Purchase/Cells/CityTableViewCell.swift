@@ -9,17 +9,17 @@
 import UIKit
 
 class CityTableViewCell: UITableViewCell {
-    
+
     // MARK: - Outlets
     @IBOutlet weak var cityLabel: UILabel!
-    
+
     // MARK: - Properties(Public)
     var city: CityRecord? {
         didSet {
             setupCell()
         }
     }
-    
+
     // MARK: - Lifecycle
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,5 +29,5 @@ class CityTableViewCell: UITableViewCell {
     private func setupCell() {
         cityLabel.text = city?.city
     }
-    
+
 }

@@ -10,7 +10,7 @@ import UIKit
 import Spring
 
 class CalendarViewController: UIViewController {
-    
+
     // MARK: - Outlets
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var contentView: SpringView!
@@ -30,12 +30,12 @@ class CalendarViewController: UIViewController {
         contentView.roundCorners(10)
         animateView(animation: "slideUp", view: contentView)
     }
-    
+
     func hide(_ sender: UISwipeGestureRecognizer) {
         animateView(animation: "slideDown", view: contentView)
         self.dismiss(animated: true, completion: nil)
     }
-    
+
     private func animateView(animation: String, view: SpringView) {
         view.animation = animation
         view.curve = "easeOut"

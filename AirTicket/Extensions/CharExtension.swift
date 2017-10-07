@@ -9,10 +9,9 @@
 import Foundation
 
 extension Character {
-    
+
     public func isUpper() -> Bool {
         let characterString = String(self)
         return (characterString == characterString.uppercased()) && (characterString != characterString.lowercased())
     }
 }
-

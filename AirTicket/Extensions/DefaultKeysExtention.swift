@@ -10,8 +10,8 @@ import Foundation
 import SwiftyUserDefaults
 
 extension DefaultsKeys {
-    
+
     static let originCity = DefaultsKey<String?>("ORIGIN_CITY")
     static let destinationCity = DefaultsKey<String?>("DESTINATION_CITY")
-    
+
 }

@@ -14,5 +14,5 @@ class HourlyWeatherTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-    
+
 }

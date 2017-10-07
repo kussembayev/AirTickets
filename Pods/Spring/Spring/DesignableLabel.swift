@@ -28,14 +28,14 @@ import UIKit
         didSet {
             let font = UIFont(name: self.font.fontName, size: self.font.pointSize)
             let text = self.text
-            
+
             let paragraphStyle = NSMutableParagraphStyle()
             paragraphStyle.lineSpacing = lineHeight
-            
+
             let attributedString = NSMutableAttributedString(string: text!)
             attributedString.addAttribute(NSParagraphStyleAttributeName, value: paragraphStyle, range: NSMakeRange(0, attributedString.length))
             attributedString.addAttribute(NSFontAttributeName, value: font!, range: NSMakeRange(0, attributedString.length))
-            
+
             self.attributedText = attributedString
         }
     }

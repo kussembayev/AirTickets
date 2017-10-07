@@ -16,9 +16,9 @@ class PassangersTableViewCell: UITableViewCell {
     @IBOutlet weak var adultPassangerLabel: SpringLabel!
     @IBOutlet weak var kidPassangerLabel: SpringLabel!
     @IBOutlet weak var babyPassangerLabel: SpringLabel!
-    
+
     var passangerViewModel = PassangerViewModel()
-    
+
     // MARK: - Lifecycle
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -41,9 +41,9 @@ class PassangersTableViewCell: UITableViewCell {
             animateLabel(animation: "pop", view: babyPassangerLabel)
         default:
             break
-        }        
+        }
     }
-    
+
     @IBAction func decrementPassangerAction(_ sender: UIButton) {
         switch sender.tag {
         case 1:
@@ -59,12 +59,11 @@ class PassangersTableViewCell: UITableViewCell {
             break
         }
     }
-    
+
     private func animateLabel(animation: String, view: SpringLabel) {
         view.animation = animation
         view.curve = "easeOut"
         view.duration = 0.5
         view.animate()
     }
-    
 }

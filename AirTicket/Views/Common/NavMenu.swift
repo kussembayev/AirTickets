@@ -20,27 +20,26 @@ class NavMenu: UIView {
     @IBOutlet weak var stepsLabel: UILabel!
     @IBOutlet weak var thereButton: UIButton!
     @IBOutlet weak var steperView: UIView!
-    
+
     // MARK: - Properties(Private)
     fileprivate let navMenu = "NavMenu"
     weak var delegate: NavMenuDelegate?
-    
-    
+
     // MARK: - Lifecycle
     override init(frame: CGRect) {
         super.init(frame: frame)
         xibSetup()
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         xibSetup()
     }
-    
+
     override func awakeFromNib() {
-        
+
     }
-    
+
     func xibSetup() {
         Bundle.main.loadNibNamed(navMenu, owner: self, options: nil)
         addSubview(contentView)
@@ -50,15 +49,15 @@ class NavMenu: UIView {
                                  colour: UIColor.lightGray.withAlphaComponent(0.5),
                                  thickness: 0.5)
     }
-    
+
     @IBAction func thereAction(_ sender: UIButton) {
         print("There action")
         delegate?.thereAction()
     }
-    
+
     @IBAction func backAction(_ sender: UIButton) {
         print("Back action")
         delegate?.backAction()
     }
-    
+
 }

@@ -18,13 +18,13 @@ class WeatherCollectionViewCell: UICollectionViewCell {
             setNotSelected()
         }
     }
-    
+
     // MARK: - Lifecycle
     override func awakeFromNib() {
         super.awakeFromNib()
         setDefault()
     }
-    
+
     private func setNotSelected() {
         if isSelected {
             backgroundColor = .white
@@ -34,7 +34,7 @@ class WeatherCollectionViewCell: UICollectionViewCell {
             setDefault()
         }
     }
-    
+
     private func setDefault() {
         backgroundColor = UIColor.bg()
         dayLabel.textColor = .white

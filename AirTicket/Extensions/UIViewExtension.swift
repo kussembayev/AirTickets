@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIView {
-    
+
     var firstResponder: Any? {
         if self.isFirstResponder {
             return self
@@ -22,17 +22,17 @@ extension UIView {
         }
         return nil
     }
-    
+
     func round(_ round: Bool = true, borderWidth: Float = 0, _ borderColor: UIColor = UIColor.clear) {
         self.layer.masksToBounds = true
         self.border(width: round ? borderWidth : 0, color: round ? borderColor : UIColor.clear)
         self.roundCorners(round ? Float(self.frame.width/2) : 0)
     }
-    
+
     func roundCorners(_ radius: Float = 3.0) {
         self.layer.cornerRadius = CGFloat(radius)
     }
-    
+
     func roundCorner(_ corner: UIRectCorner, _ radius: Float = 3.0) {
         let radiusCG = CGFloat(radius)
         let maskPath = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corner, cornerRadii: CGSize(width: radiusCG, height: radiusCG))
@@ -41,24 +41,24 @@ extension UIView {
         maskLayer.path = maskPath.cgPath
         self.layer.mask = maskLayer
     }
-    
+
     func border(width: Float = 0, color: UIColor = UIColor.clear) {
         self.layer.borderWidth = CGFloat(width)
         self.layer.borderColor = color.cgColor
     }
-    
+
     func removeAllGestureRecongnizers() {
         for r in self.gestureRecognizers ?? [] {
             self.removeGestureRecognizer(r)
         }
     }
-    
+
     func removeAllSubviews() {
         for s in self.subviews {
             s.removeFromSuperview()
         }
     }
-    
+
     class func zero() -> UIView {
         let view = UIView(frame: CGRect.zero)
         view.backgroundColor = UIColor.clear
@@ -69,18 +69,18 @@ extension UIView {
 // MARK: - Borders
 
 extension UIView {
-    
+
     func addBorder(edges: UIRectEdge, colour: UIColor = UIColor.white, thickness: CGFloat = 0.5) -> [UIView] {
-        
+
         var borders = [UIView]()
-        
+
         func border() -> UIView {
             let border = UIView(frame: CGRect.zero)
             border.backgroundColor = colour
             border.translatesAutoresizingMaskIntoConstraints = false
             return border
         }
-        
+
         if edges.contains(.top) || edges.contains(.all) {
             let top = border()
             addSubview(top)
@@ -96,7 +96,7 @@ extension UIView {
                                                views: ["top": top]))
             borders.append(top)
         }
-        
+
         if edges.contains(.left) || edges.contains(.all) {
             let left = border()
             addSubview(left)
@@ -112,7 +112,7 @@ extension UIView {
                                                views: ["left": left]))
             borders.append(left)
         }
-        
+
         if edges.contains(.right) || edges.contains(.all) {
             let right = border()
             addSubview(right)
@@ -128,7 +128,7 @@ extension UIView {
                                                views: ["right": right]))
             borders.append(right)
         }
-        
+
         if edges.contains(.bottom) || edges.contains(.all) {
             let bottom = border()
             addSubview(bottom)
@@ -144,7 +144,7 @@ extension UIView {
                                                views: ["bottom": bottom]))
             borders.append(bottom)
         }
-        
+
         return borders
     }
 }
