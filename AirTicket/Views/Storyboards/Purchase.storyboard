@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="pa8-DH-yCt">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Purchase View Controller-->
+        <scene sceneID="I4b-Gh-m4Q">
+            <objects>
+                <viewController id="ToD-et-csz" customClass="PurchaseViewController" customModule="AirTicket" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="85e-hN-tyQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="dBB-MO-4mh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Vju-hH-po0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Cxg-Ql-L7E">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="So0-x8-ElE">
+                                <rect key="frame" x="0.0" y="578" width="375" height="40"/>
+                                <color key="backgroundColor" red="0.047058823529411764" green="0.28235294117647058" blue="0.68627450980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="eor-tG-sP3"/>
+                                </constraints>
+                                <state key="normal" title="Найти рейсы">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="originID"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="findTicketsAction:" destination="ToD-et-csz" eventType="touchUpInside" id="3wg-1t-Ag7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dBB-MO-4mh" firstAttribute="top" secondItem="So0-x8-ElE" secondAttribute="bottom" id="90E-Xs-PAG"/>
+                            <constraint firstItem="So0-x8-ElE" firstAttribute="leading" secondItem="Vju-hH-po0" secondAttribute="leading" id="CRw-lJ-Zrb"/>
+                            <constraint firstAttribute="trailing" secondItem="Cxg-Ql-L7E" secondAttribute="trailing" id="FNT-9I-I3E"/>
+                            <constraint firstItem="Cxg-Ql-L7E" firstAttribute="top" secondItem="85e-hN-tyQ" secondAttribute="bottom" id="HMc-R6-uub"/>
+                            <constraint firstAttribute="trailing" secondItem="So0-x8-ElE" secondAttribute="trailing" id="ZBU-iI-zbg"/>
+                            <constraint firstItem="Cxg-Ql-L7E" firstAttribute="leading" secondItem="Vju-hH-po0" secondAttribute="leading" id="eh9-DW-PuP"/>
+                            <constraint firstItem="dBB-MO-4mh" firstAttribute="top" secondItem="Cxg-Ql-L7E" secondAttribute="bottom" id="z0k-eu-1yc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="wyi-u6-E9u">
+                        <barButtonItem key="leftBarButtonItem" image="icnGlobalWait" id="ymN-kA-qcZ"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="Cxg-Ql-L7E" id="xPN-9O-9Aj"/>
+                        <segue destination="fqt-bR-R47" kind="show" identifier="ticketsSegue" id="gDR-EK-e5Y"/>
+                        <segue destination="sAk-3X-rHO" kind="presentation" identifier="citiesSegue" id="now-M3-ooE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dGY-7n-9hr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-460" y="61.619190404797607"/>
+        </scene>
+        <!--Cities View Controller-->
+        <scene sceneID="3dj-OE-pol">
+            <objects>
+                <viewController id="sAk-3X-rHO" customClass="CitiesViewController" customModule="AirTicket" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fZV-UH-qLY"/>
+                        <viewControllerLayoutGuide type="bottom" id="qlE-Hq-dTc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CXa-kJ-DS2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Откуда" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jzN-x4-wKT">
+                                <rect key="frame" x="32" y="20" width="66" height="21"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wey-KA-SQx">
+                                <rect key="frame" x="0.0" y="49" width="375" height="618"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qlE-Hq-dTc" firstAttribute="top" secondItem="wey-KA-SQx" secondAttribute="bottom" id="E54-3f-vLj"/>
+                            <constraint firstItem="jzN-x4-wKT" firstAttribute="top" secondItem="fZV-UH-qLY" secondAttribute="bottom" id="Ngr-EW-57S"/>
+                            <constraint firstAttribute="trailing" secondItem="wey-KA-SQx" secondAttribute="trailing" id="k2A-EK-HrV"/>
+                            <constraint firstItem="wey-KA-SQx" firstAttribute="leading" secondItem="CXa-kJ-DS2" secondAttribute="leading" id="qEN-VE-z6R"/>
+                            <constraint firstItem="wey-KA-SQx" firstAttribute="top" secondItem="jzN-x4-wKT" secondAttribute="bottom" constant="8" id="rVb-yL-QjW"/>
+                            <constraint firstItem="jzN-x4-wKT" firstAttribute="leading" secondItem="CXa-kJ-DS2" secondAttribute="leadingMargin" constant="16" id="tjr-Cf-BKd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="wey-KA-SQx" id="dPE-AT-Rcd"/>
+                        <outlet property="textField" destination="jzN-x4-wKT" id="NEZ-dA-BNm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8K4-OW-X2a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-460" y="774.96251874062978"/>
+        </scene>
+        <!--Tickets View Controller-->
+        <scene sceneID="d2u-gm-fXs">
+            <objects>
+                <viewController id="fqt-bR-R47" customClass="TicketsViewController" customModule="AirTicket" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XKk-Ya-5vR"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ees-mg-pQp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QkN-oZ-0ue">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RbF-bi-RZP" customClass="NavMenu" customModule="AirTicket" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="375" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="26r-U2-lRn"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JfZ-ph-YH9">
+                                <rect key="frame" x="0.0" y="172" width="375" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="zf2-tf-Ama"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mKO-HE-X1T">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ldm-vR-Lir">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JfZ-ph-YH9" firstAttribute="top" secondItem="RbF-bi-RZP" secondAttribute="bottom" constant="8" id="2VV-5h-NKJ"/>
+                            <constraint firstItem="JfZ-ph-YH9" firstAttribute="leading" secondItem="QkN-oZ-0ue" secondAttribute="leading" id="9pd-hG-wCK"/>
+                            <constraint firstAttribute="trailing" secondItem="RbF-bi-RZP" secondAttribute="trailing" id="Ju8-dW-uEu"/>
+                            <constraint firstAttribute="trailing" secondItem="JfZ-ph-YH9" secondAttribute="trailing" id="cbp-A6-gOe"/>
+                            <constraint firstItem="RbF-bi-RZP" firstAttribute="top" secondItem="XKk-Ya-5vR" secondAttribute="bottom" id="jJF-29-1SD"/>
+                            <constraint firstItem="RbF-bi-RZP" firstAttribute="leading" secondItem="QkN-oZ-0ue" secondAttribute="leading" id="quK-cV-bDG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="JfZ-ph-YH9" id="Oh0-Zm-jfa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IV8-9g-42X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="391.19999999999999" y="61.619190404797607"/>
+        </scene>
+        <!--Покупки-->
+        <scene sceneID="6Uf-DX-pdw">
+            <objects>
+                <navigationController id="pa8-DH-yCt" customClass="BaseNavigationController" customModule="AirTicket" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" tag="1" title="Покупки" id="yuU-yl-ZcW">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YFt-fw-uzK">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ToD-et-csz" kind="relationship" relationship="rootViewController" id="Khq-hb-gbG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="343-Yj-tNl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1314" y="62"/>
+        </scene>
+        <!--Calendar View Controller-->
+        <scene sceneID="1mB-vr-CEp">
+            <objects>
+                <viewController storyboardIdentifier="CalendarViewController" id="mGm-6Z-KmF" customClass="CalendarViewController" customModule="AirTicket" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Tmt-49-9MR"/>
+                        <viewControllerLayoutGuide type="bottom" id="YGM-aG-ybq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gL1-dS-jCq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.25" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PXm-QT-f8c">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uJX-Zo-mvy" customClass="SpringView" customModule="Spring">
+                                <rect key="frame" x="0.0" y="28" width="375" height="639"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="PXm-QT-f8c" secondAttribute="trailing" id="G1R-ca-1ka"/>
+                            <constraint firstItem="uJX-Zo-mvy" firstAttribute="top" secondItem="Tmt-49-9MR" secondAttribute="bottom" constant="8" id="He6-lZ-zhY"/>
+                            <constraint firstItem="YGM-aG-ybq" firstAttribute="top" secondItem="uJX-Zo-mvy" secondAttribute="bottom" id="Snz-c7-HcY"/>
+                            <constraint firstItem="uJX-Zo-mvy" firstAttribute="leading" secondItem="gL1-dS-jCq" secondAttribute="leading" id="dcZ-eP-sld"/>
+                            <constraint firstItem="PXm-QT-f8c" firstAttribute="top" secondItem="gL1-dS-jCq" secondAttribute="top" id="mqN-CN-JvZ"/>
+                            <constraint firstAttribute="trailing" secondItem="uJX-Zo-mvy" secondAttribute="trailing" id="pkU-g5-IK2"/>
+                            <constraint firstItem="PXm-QT-f8c" firstAttribute="leading" secondItem="gL1-dS-jCq" secondAttribute="leading" id="swi-nx-eQZ"/>
+                            <constraint firstItem="YGM-aG-ybq" firstAttribute="top" secondItem="PXm-QT-f8c" secondAttribute="bottom" id="zsz-Rz-woe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bgView" destination="PXm-QT-f8c" id="6FS-dD-Bc3"/>
+                        <outlet property="contentView" destination="uJX-Zo-mvy" id="kM3-WH-o7b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xhS-3K-Z0O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="389.60000000000002" y="774.96251874062978"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icnGlobalWait" width="17" height="17"/>
+    </resources>
+</document>

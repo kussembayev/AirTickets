@@ -1,0 +1,6 @@
+framework module Pods_AirTicket {
+  umbrella header "Pods-AirTicket-umbrella.h"
+
+  export *
+  module * { export * }
+}

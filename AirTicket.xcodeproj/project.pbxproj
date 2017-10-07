@@ -1,0 +1,996 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8C96FC12842A93DC149EF97F /* Pods_AirTicketTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0066889F61B158D639AFE83 /* Pods_AirTicketTests.framework */; };
+		AB15A6BF1F88B54C00527339 /* ViewRoutines.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB15A6BE1F88B54C00527339 /* ViewRoutines.swift */; };
+		AB15A6C11F88B58B00527339 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB15A6C01F88B58B00527339 /* StringExtension.swift */; };
+		AB15A6C31F88B5AD00527339 /* CharExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB15A6C21F88B5AD00527339 /* CharExtension.swift */; };
+		AB2DCD3B1F87727200DA9FFC /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2DCD2A1F87727200DA9FFC /* UIColorExtension.swift */; };
+		AB2DCD3C1F87727200DA9FFC /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2DCD2B1F87727200DA9FFC /* UIViewControllerExtension.swift */; };
+		AB2DCD3D1F87727200DA9FFC /* PurchaseRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2DCD2D1F87727200DA9FFC /* PurchaseRecord.swift */; };
+		AB2DCD3E1F87727200DA9FFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2DCD301F87727200DA9FFC /* AppDelegate.swift */; };
+		AB2DCD3F1F87727200DA9FFC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB2DCD311F87727200DA9FFC /* Info.plist */; };
+		AB2DCD401F87727200DA9FFC /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2DCD341F87727200DA9FFC /* BaseNavigationController.swift */; };
+		AB2DCD411F87727200DA9FFC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2DCD351F87727200DA9FFC /* BaseViewController.swift */; };
+		AB2DCD421F87727200DA9FFC /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2DCD361F87727200DA9FFC /* TabBarViewController.swift */; };
+		AB2DCD431F87727200DA9FFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB2DCD391F87727200DA9FFC /* Main.storyboard */; };
+		AB2DCD461F87745C00DA9FFC /* MyTickets.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB2DCD451F87745C00DA9FFC /* MyTickets.storyboard */; };
+		AB2DCD481F87746700DA9FFC /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB2DCD471F87746700DA9FFC /* Registration.storyboard */; };
+		AB2DCD4A1F87747100DA9FFC /* Purchase.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB2DCD491F87747100DA9FFC /* Purchase.storyboard */; };
+		AB2DCD4C1F87756500DA9FFC /* PurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2DCD4B1F87756500DA9FFC /* PurchaseViewController.swift */; };
+		AB2DCD501F8777E300DA9FFC /* DirectionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2DCD4E1F8777E300DA9FFC /* DirectionsTableViewCell.swift */; };
+		AB2DCD511F8777E300DA9FFC /* DirectionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB2DCD4F1F8777E300DA9FFC /* DirectionsTableViewCell.xib */; };
+		AB2DCD541F8777F500DA9FFC /* DatesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2DCD521F8777F500DA9FFC /* DatesTableViewCell.swift */; };
+		AB2DCD551F8777F500DA9FFC /* DatesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB2DCD531F8777F500DA9FFC /* DatesTableViewCell.xib */; };
+		AB2DCD581F87780500DA9FFC /* PassangersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2DCD561F87780500DA9FFC /* PassangersTableViewCell.swift */; };
+		AB2DCD591F87780500DA9FFC /* PassangersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB2DCD571F87780500DA9FFC /* PassangersTableViewCell.xib */; };
+		AB2DCD5B1F8781B600DA9FFC /* TicketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2DCD5A1F8781B600DA9FFC /* TicketsViewController.swift */; };
+		AB2DCD601F87872000DA9FFC /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2DCD5F1F87872000DA9FFC /* TitleView.swift */; };
+		AB403A6B1F877112008165BE /* AirTicket.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AB403A691F877112008165BE /* AirTicket.xcdatamodeld */; };
+		AB403A6D1F877112008165BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB403A6C1F877112008165BE /* Assets.xcassets */; };
+		AB403A701F877112008165BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB403A6E1F877112008165BE /* LaunchScreen.storyboard */; };
+		AB403A7B1F877112008165BE /* AirTicketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB403A7A1F877112008165BE /* AirTicketTests.swift */; };
+		AB403A861F877112008165BE /* AirTicketUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB403A851F877112008165BE /* AirTicketUITests.swift */; };
+		AB5505111F88AE3F0061670B /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5505101F88AE3F0061670B /* UIViewExtension.swift */; };
+		AB5505151F88B3C30061670B /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5505141F88B3C30061670B /* CalendarViewController.swift */; };
+		AB7576461F87C5E000B39493 /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7576451F87C5E000B39493 /* WeatherManager.swift */; };
+		AB7576491F87C70400B39493 /* WeatherCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7576471F87C70400B39493 /* WeatherCollectionViewCell.swift */; };
+		AB75764A1F87C70400B39493 /* WeatherCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB7576481F87C70400B39493 /* WeatherCollectionViewCell.xib */; };
+		AB75764C1F87C77E00B39493 /* SingleRowFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB75764B1F87C77E00B39493 /* SingleRowFlowLayout.swift */; };
+		AB75764E1F87D46800B39493 /* CitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB75764D1F87D46800B39493 /* CitiesViewController.swift */; };
+		AB7576501F87D67800B39493 /* CityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB75764F1F87D67800B39493 /* CityManager.swift */; };
+		AB7576521F87D9C200B39493 /* ManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7576511F87D9C100B39493 /* ManagerProtocol.swift */; };
+		AB7576541F87DA1400B39493 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7576531F87DA1400B39493 /* Reachability.swift */; };
+		AB7576571F87DAF200B39493 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7576561F87DAF200B39493 /* Utils.swift */; };
+		AB7576591F87DB4500B39493 /* RequestParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7576581F87DB4500B39493 /* RequestParams.swift */; };
+		AB75765B1F87DBCD00B39493 /* UrlRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB75765A1F87DBCD00B39493 /* UrlRouting.swift */; };
+		AB75765D1F88003300B39493 /* CityRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB75765C1F88003300B39493 /* CityRecord.swift */; };
+		AB7576601F88063100B39493 /* CityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB75765E1F88063100B39493 /* CityTableViewCell.swift */; };
+		AB7576611F88063100B39493 /* CityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB75765F1F88063100B39493 /* CityTableViewCell.xib */; };
+		AB7576631F8809F200B39493 /* DefaultKeysExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7576621F8809F200B39493 /* DefaultKeysExtention.swift */; };
+		ABFD951B1F87A09400AE9A82 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFD951A1F87A09400AE9A82 /* UIImageExtension.swift */; };
+		ABFD951D1F87A24800AE9A82 /* NavMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABFD951C1F87A24800AE9A82 /* NavMenu.xib */; };
+		ABFD951F1F87A27500AE9A82 /* NavMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFD951E1F87A27500AE9A82 /* NavMenu.swift */; };
+		DBC09E385768454EAA005FB9 /* Pods_AirTicketUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C4EDE3EA0B5801C0CDE6EF8 /* Pods_AirTicketUITests.framework */; };
+		DE4A101D5989B5508F10416D /* Pods_AirTicket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25695FC3CF2605345663B9F0 /* Pods_AirTicket.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AB403A771F877112008165BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AB403A571F877111008165BE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AB403A5E1F877112008165BE;
+			remoteInfo = AirTicket;
+		};
+		AB403A821F877112008165BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AB403A571F877111008165BE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AB403A5E1F877112008165BE;
+			remoteInfo = AirTicket;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		25695FC3CF2605345663B9F0 /* Pods_AirTicket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AirTicket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C4EDE3EA0B5801C0CDE6EF8 /* Pods_AirTicketUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AirTicketUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		880E8410908D79C175E0A9FC /* Pods-AirTicketTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirTicketTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AirTicketTests/Pods-AirTicketTests.release.xcconfig"; sourceTree = "<group>"; };
+		AB15A6BE1F88B54C00527339 /* ViewRoutines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewRoutines.swift; sourceTree = "<group>"; };
+		AB15A6C01F88B58B00527339 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		AB15A6C21F88B5AD00527339 /* CharExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharExtension.swift; sourceTree = "<group>"; };
+		AB2DCD2A1F87727200DA9FFC /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		AB2DCD2B1F87727200DA9FFC /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		AB2DCD2D1F87727200DA9FFC /* PurchaseRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseRecord.swift; sourceTree = "<group>"; };
+		AB2DCD301F87727200DA9FFC /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AB2DCD311F87727200DA9FFC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB2DCD341F87727200DA9FFC /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		AB2DCD351F87727200DA9FFC /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		AB2DCD361F87727200DA9FFC /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		AB2DCD391F87727200DA9FFC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		AB2DCD451F87745C00DA9FFC /* MyTickets.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyTickets.storyboard; sourceTree = "<group>"; };
+		AB2DCD471F87746700DA9FFC /* Registration.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
+		AB2DCD491F87747100DA9FFC /* Purchase.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Purchase.storyboard; sourceTree = "<group>"; };
+		AB2DCD4B1F87756500DA9FFC /* PurchaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseViewController.swift; sourceTree = "<group>"; };
+		AB2DCD4E1F8777E300DA9FFC /* DirectionsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionsTableViewCell.swift; sourceTree = "<group>"; };
+		AB2DCD4F1F8777E300DA9FFC /* DirectionsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DirectionsTableViewCell.xib; sourceTree = "<group>"; };
+		AB2DCD521F8777F500DA9FFC /* DatesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatesTableViewCell.swift; sourceTree = "<group>"; };
+		AB2DCD531F8777F500DA9FFC /* DatesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DatesTableViewCell.xib; sourceTree = "<group>"; };
+		AB2DCD561F87780500DA9FFC /* PassangersTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassangersTableViewCell.swift; sourceTree = "<group>"; };
+		AB2DCD571F87780500DA9FFC /* PassangersTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PassangersTableViewCell.xib; sourceTree = "<group>"; };
+		AB2DCD5A1F8781B600DA9FFC /* TicketsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketsViewController.swift; sourceTree = "<group>"; };
+		AB2DCD5F1F87872000DA9FFC /* TitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		AB403A5F1F877112008165BE /* AirTicket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirTicket.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB403A6A1F877112008165BE /* AirTicket.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AirTicket.xcdatamodel; sourceTree = "<group>"; };
+		AB403A6C1F877112008165BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AB403A6F1F877112008165BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AB403A761F877112008165BE /* AirTicketTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AirTicketTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB403A7A1F877112008165BE /* AirTicketTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirTicketTests.swift; sourceTree = "<group>"; };
+		AB403A7C1F877112008165BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB403A811F877112008165BE /* AirTicketUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AirTicketUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB403A851F877112008165BE /* AirTicketUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirTicketUITests.swift; sourceTree = "<group>"; };
+		AB403A871F877112008165BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB5505101F88AE3F0061670B /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		AB5505141F88B3C30061670B /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		AB7576451F87C5E000B39493 /* WeatherManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
+		AB7576471F87C70400B39493 /* WeatherCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCollectionViewCell.swift; sourceTree = "<group>"; };
+		AB7576481F87C70400B39493 /* WeatherCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeatherCollectionViewCell.xib; sourceTree = "<group>"; };
+		AB75764B1F87C77E00B39493 /* SingleRowFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleRowFlowLayout.swift; sourceTree = "<group>"; };
+		AB75764D1F87D46800B39493 /* CitiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CitiesViewController.swift; sourceTree = "<group>"; };
+		AB75764F1F87D67800B39493 /* CityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityManager.swift; sourceTree = "<group>"; };
+		AB7576511F87D9C100B39493 /* ManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerProtocol.swift; sourceTree = "<group>"; };
+		AB7576531F87DA1400B39493 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		AB7576561F87DAF200B39493 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		AB7576581F87DB4500B39493 /* RequestParams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestParams.swift; sourceTree = "<group>"; };
+		AB75765A1F87DBCD00B39493 /* UrlRouting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlRouting.swift; sourceTree = "<group>"; };
+		AB75765C1F88003300B39493 /* CityRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityRecord.swift; sourceTree = "<group>"; };
+		AB75765E1F88063100B39493 /* CityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityTableViewCell.swift; sourceTree = "<group>"; };
+		AB75765F1F88063100B39493 /* CityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CityTableViewCell.xib; sourceTree = "<group>"; };
+		AB7576621F8809F200B39493 /* DefaultKeysExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultKeysExtention.swift; sourceTree = "<group>"; };
+		ABFD951A1F87A09400AE9A82 /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		ABFD951C1F87A24800AE9A82 /* NavMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavMenu.xib; sourceTree = "<group>"; };
+		ABFD951E1F87A27500AE9A82 /* NavMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavMenu.swift; sourceTree = "<group>"; };
+		AF40C814962106255BA90870 /* Pods-AirTicket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirTicket.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AirTicket/Pods-AirTicket.debug.xcconfig"; sourceTree = "<group>"; };
+		B34FA855059CD5F26EB2C1DC /* Pods-AirTicketUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirTicketUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AirTicketUITests/Pods-AirTicketUITests.release.xcconfig"; sourceTree = "<group>"; };
+		BF4FB558DB9C9531E6A8212D /* Pods-AirTicket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirTicket.release.xcconfig"; path = "Pods/Target Support Files/Pods-AirTicket/Pods-AirTicket.release.xcconfig"; sourceTree = "<group>"; };
+		CE802E4EE6C4AEF48C144B58 /* Pods-AirTicketTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirTicketTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AirTicketTests/Pods-AirTicketTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F0066889F61B158D639AFE83 /* Pods_AirTicketTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AirTicketTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF3E7A0D302C70B1AC9DC141 /* Pods-AirTicketUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirTicketUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AirTicketUITests/Pods-AirTicketUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AB403A5C1F877112008165BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE4A101D5989B5508F10416D /* Pods_AirTicket.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB403A731F877112008165BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C96FC12842A93DC149EF97F /* Pods_AirTicketTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB403A7E1F877112008165BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBC09E385768454EAA005FB9 /* Pods_AirTicketUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		87082FB4261BA268D852F64B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				25695FC3CF2605345663B9F0 /* Pods_AirTicket.framework */,
+				F0066889F61B158D639AFE83 /* Pods_AirTicketTests.framework */,
+				7C4EDE3EA0B5801C0CDE6EF8 /* Pods_AirTicketUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AB2DCD291F87727200DA9FFC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AB2DCD2A1F87727200DA9FFC /* UIColorExtension.swift */,
+				AB2DCD2B1F87727200DA9FFC /* UIViewControllerExtension.swift */,
+				ABFD951A1F87A09400AE9A82 /* UIImageExtension.swift */,
+				AB7576621F8809F200B39493 /* DefaultKeysExtention.swift */,
+				AB5505101F88AE3F0061670B /* UIViewExtension.swift */,
+				AB15A6C01F88B58B00527339 /* StringExtension.swift */,
+				AB15A6C21F88B5AD00527339 /* CharExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AB2DCD2C1F87727200DA9FFC /* Records */ = {
+			isa = PBXGroup;
+			children = (
+				AB2DCD2D1F87727200DA9FFC /* PurchaseRecord.swift */,
+				AB75765C1F88003300B39493 /* CityRecord.swift */,
+			);
+			path = Records;
+			sourceTree = "<group>";
+		};
+		AB2DCD2E1F87727200DA9FFC /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				AB7576451F87C5E000B39493 /* WeatherManager.swift */,
+				AB75764F1F87D67800B39493 /* CityManager.swift */,
+				AB7576511F87D9C100B39493 /* ManagerProtocol.swift */,
+				AB7576531F87DA1400B39493 /* Reachability.swift */,
+				AB7576581F87DB4500B39493 /* RequestParams.swift */,
+				AB75765A1F87DBCD00B39493 /* UrlRouting.swift */,
+			);
+			name = Managers;
+			path = Services;
+			sourceTree = "<group>";
+		};
+		AB2DCD2F1F87727200DA9FFC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AB2DCD301F87727200DA9FFC /* AppDelegate.swift */,
+				AB2DCD311F87727200DA9FFC /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AB2DCD321F87727200DA9FFC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AB75764B1F87C77E00B39493 /* SingleRowFlowLayout.swift */,
+				AB2DCD5C1F8786FA00DA9FFC /* Common */,
+				AB2DCD331F87727200DA9FFC /* Base */,
+				AB2DCD371F87727200DA9FFC /* Purchase */,
+				AB2DCD381F87727200DA9FFC /* Storyboards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AB2DCD331F87727200DA9FFC /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				AB2DCD341F87727200DA9FFC /* BaseNavigationController.swift */,
+				AB2DCD351F87727200DA9FFC /* BaseViewController.swift */,
+				AB2DCD361F87727200DA9FFC /* TabBarViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		AB2DCD371F87727200DA9FFC /* Purchase */ = {
+			isa = PBXGroup;
+			children = (
+				AB2DCD4D1F87766700DA9FFC /* Cells */,
+				AB2DCD4B1F87756500DA9FFC /* PurchaseViewController.swift */,
+				AB2DCD5A1F8781B600DA9FFC /* TicketsViewController.swift */,
+				AB75764D1F87D46800B39493 /* CitiesViewController.swift */,
+				AB5505141F88B3C30061670B /* CalendarViewController.swift */,
+			);
+			path = Purchase;
+			sourceTree = "<group>";
+		};
+		AB2DCD381F87727200DA9FFC /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				AB2DCD391F87727200DA9FFC /* Main.storyboard */,
+				AB2DCD451F87745C00DA9FFC /* MyTickets.storyboard */,
+				AB2DCD471F87746700DA9FFC /* Registration.storyboard */,
+				AB2DCD491F87747100DA9FFC /* Purchase.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		AB2DCD4D1F87766700DA9FFC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				AB2DCD4E1F8777E300DA9FFC /* DirectionsTableViewCell.swift */,
+				AB2DCD4F1F8777E300DA9FFC /* DirectionsTableViewCell.xib */,
+				AB2DCD521F8777F500DA9FFC /* DatesTableViewCell.swift */,
+				AB2DCD531F8777F500DA9FFC /* DatesTableViewCell.xib */,
+				AB2DCD561F87780500DA9FFC /* PassangersTableViewCell.swift */,
+				AB2DCD571F87780500DA9FFC /* PassangersTableViewCell.xib */,
+				AB7576471F87C70400B39493 /* WeatherCollectionViewCell.swift */,
+				AB7576481F87C70400B39493 /* WeatherCollectionViewCell.xib */,
+				AB75765E1F88063100B39493 /* CityTableViewCell.swift */,
+				AB75765F1F88063100B39493 /* CityTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		AB2DCD5C1F8786FA00DA9FFC /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				AB2DCD5F1F87872000DA9FFC /* TitleView.swift */,
+				ABFD951C1F87A24800AE9A82 /* NavMenu.xib */,
+				ABFD951E1F87A27500AE9A82 /* NavMenu.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		AB403A561F877111008165BE = {
+			isa = PBXGroup;
+			children = (
+				AB403A611F877112008165BE /* AirTicket */,
+				AB403A791F877112008165BE /* AirTicketTests */,
+				AB403A841F877112008165BE /* AirTicketUITests */,
+				AB403A601F877112008165BE /* Products */,
+				DB034F6DB5503A66B32B46C4 /* Pods */,
+				87082FB4261BA268D852F64B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AB403A601F877112008165BE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AB403A5F1F877112008165BE /* AirTicket.app */,
+				AB403A761F877112008165BE /* AirTicketTests.xctest */,
+				AB403A811F877112008165BE /* AirTicketUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AB403A611F877112008165BE /* AirTicket */ = {
+			isa = PBXGroup;
+			children = (
+				AB7576551F87DADF00B39493 /* Utilities */,
+				AB2DCD291F87727200DA9FFC /* Extensions */,
+				AB2DCD2C1F87727200DA9FFC /* Records */,
+				AB2DCD2E1F87727200DA9FFC /* Managers */,
+				AB2DCD321F87727200DA9FFC /* Views */,
+				AB2DCD2F1F87727200DA9FFC /* Supporting Files */,
+				AB403A6C1F877112008165BE /* Assets.xcassets */,
+				AB403A6E1F877112008165BE /* LaunchScreen.storyboard */,
+				AB403A691F877112008165BE /* AirTicket.xcdatamodeld */,
+			);
+			path = AirTicket;
+			sourceTree = "<group>";
+		};
+		AB403A791F877112008165BE /* AirTicketTests */ = {
+			isa = PBXGroup;
+			children = (
+				AB403A7A1F877112008165BE /* AirTicketTests.swift */,
+				AB403A7C1F877112008165BE /* Info.plist */,
+			);
+			path = AirTicketTests;
+			sourceTree = "<group>";
+		};
+		AB403A841F877112008165BE /* AirTicketUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AB403A851F877112008165BE /* AirTicketUITests.swift */,
+				AB403A871F877112008165BE /* Info.plist */,
+			);
+			path = AirTicketUITests;
+			sourceTree = "<group>";
+		};
+		AB7576551F87DADF00B39493 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				AB7576561F87DAF200B39493 /* Utils.swift */,
+				AB15A6BE1F88B54C00527339 /* ViewRoutines.swift */,
+			);
+			name = Utilities;
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		DB034F6DB5503A66B32B46C4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AF40C814962106255BA90870 /* Pods-AirTicket.debug.xcconfig */,
+				BF4FB558DB9C9531E6A8212D /* Pods-AirTicket.release.xcconfig */,
+				CE802E4EE6C4AEF48C144B58 /* Pods-AirTicketTests.debug.xcconfig */,
+				880E8410908D79C175E0A9FC /* Pods-AirTicketTests.release.xcconfig */,
+				FF3E7A0D302C70B1AC9DC141 /* Pods-AirTicketUITests.debug.xcconfig */,
+				B34FA855059CD5F26EB2C1DC /* Pods-AirTicketUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AB403A5E1F877112008165BE /* AirTicket */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB403A8A1F877112008165BE /* Build configuration list for PBXNativeTarget "AirTicket" */;
+			buildPhases = (
+				143ED59F1914B027F15157D8 /* [CP] Check Pods Manifest.lock */,
+				AB403A5B1F877112008165BE /* Sources */,
+				AB403A5C1F877112008165BE /* Frameworks */,
+				AB403A5D1F877112008165BE /* Resources */,
+				562DDE81A67B69C5D9E8E494 /* [CP] Embed Pods Frameworks */,
+				54EC37DB7BF582493C472EAD /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AirTicket;
+			productName = AirTicket;
+			productReference = AB403A5F1F877112008165BE /* AirTicket.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AB403A751F877112008165BE /* AirTicketTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB403A8D1F877112008165BE /* Build configuration list for PBXNativeTarget "AirTicketTests" */;
+			buildPhases = (
+				68A6EF0E9D315EB43A56FBEC /* [CP] Check Pods Manifest.lock */,
+				AB403A721F877112008165BE /* Sources */,
+				AB403A731F877112008165BE /* Frameworks */,
+				AB403A741F877112008165BE /* Resources */,
+				C7624F1D67C7E8F2D467CE77 /* [CP] Embed Pods Frameworks */,
+				8DA9B94330B9469851EE834D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AB403A781F877112008165BE /* PBXTargetDependency */,
+			);
+			name = AirTicketTests;
+			productName = AirTicketTests;
+			productReference = AB403A761F877112008165BE /* AirTicketTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AB403A801F877112008165BE /* AirTicketUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB403A901F877112008165BE /* Build configuration list for PBXNativeTarget "AirTicketUITests" */;
+			buildPhases = (
+				05C69650BF285D54830796A7 /* [CP] Check Pods Manifest.lock */,
+				AB403A7D1F877112008165BE /* Sources */,
+				AB403A7E1F877112008165BE /* Frameworks */,
+				AB403A7F1F877112008165BE /* Resources */,
+				9FF670576ED9E35EF05DC637 /* [CP] Embed Pods Frameworks */,
+				D0B4F83954FBABD58C5B3C17 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AB403A831F877112008165BE /* PBXTargetDependency */,
+			);
+			name = AirTicketUITests;
+			productName = AirTicketUITests;
+			productReference = AB403A811F877112008165BE /* AirTicketUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AB403A571F877111008165BE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = kuzya;
+				TargetAttributes = {
+					AB403A5E1F877112008165BE = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = ZNX957M49C;
+						ProvisioningStyle = Automatic;
+					};
+					AB403A751F877112008165BE = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = ZNX957M49C;
+						ProvisioningStyle = Automatic;
+						TestTargetID = AB403A5E1F877112008165BE;
+					};
+					AB403A801F877112008165BE = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = ZNX957M49C;
+						ProvisioningStyle = Automatic;
+						TestTargetID = AB403A5E1F877112008165BE;
+					};
+				};
+			};
+			buildConfigurationList = AB403A5A1F877111008165BE /* Build configuration list for PBXProject "AirTicket" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AB403A561F877111008165BE;
+			productRefGroup = AB403A601F877112008165BE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AB403A5E1F877112008165BE /* AirTicket */,
+				AB403A751F877112008165BE /* AirTicketTests */,
+				AB403A801F877112008165BE /* AirTicketUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AB403A5D1F877112008165BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB403A701F877112008165BE /* LaunchScreen.storyboard in Resources */,
+				AB2DCD481F87746700DA9FFC /* Registration.storyboard in Resources */,
+				ABFD951D1F87A24800AE9A82 /* NavMenu.xib in Resources */,
+				AB2DCD461F87745C00DA9FFC /* MyTickets.storyboard in Resources */,
+				AB2DCD511F8777E300DA9FFC /* DirectionsTableViewCell.xib in Resources */,
+				AB75764A1F87C70400B39493 /* WeatherCollectionViewCell.xib in Resources */,
+				AB2DCD591F87780500DA9FFC /* PassangersTableViewCell.xib in Resources */,
+				AB403A6D1F877112008165BE /* Assets.xcassets in Resources */,
+				AB2DCD3F1F87727200DA9FFC /* Info.plist in Resources */,
+				AB2DCD551F8777F500DA9FFC /* DatesTableViewCell.xib in Resources */,
+				AB7576611F88063100B39493 /* CityTableViewCell.xib in Resources */,
+				AB2DCD4A1F87747100DA9FFC /* Purchase.storyboard in Resources */,
+				AB2DCD431F87727200DA9FFC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB403A741F877112008165BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB403A7F1F877112008165BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		05C69650BF285D54830796A7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		143ED59F1914B027F15157D8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		54EC37DB7BF582493C472EAD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AirTicket/Pods-AirTicket-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		562DDE81A67B69C5D9E8E494 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AirTicket/Pods-AirTicket-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		68A6EF0E9D315EB43A56FBEC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8DA9B94330B9469851EE834D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AirTicketTests/Pods-AirTicketTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9FF670576ED9E35EF05DC637 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AirTicketUITests/Pods-AirTicketUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7624F1D67C7E8F2D467CE77 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AirTicketTests/Pods-AirTicketTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D0B4F83954FBABD58C5B3C17 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AirTicketUITests/Pods-AirTicketUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AB403A5B1F877112008165BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB5505111F88AE3F0061670B /* UIViewExtension.swift in Sources */,
+				AB15A6BF1F88B54C00527339 /* ViewRoutines.swift in Sources */,
+				AB75764C1F87C77E00B39493 /* SingleRowFlowLayout.swift in Sources */,
+				AB75764E1F87D46800B39493 /* CitiesViewController.swift in Sources */,
+				AB2DCD421F87727200DA9FFC /* TabBarViewController.swift in Sources */,
+				AB15A6C31F88B5AD00527339 /* CharExtension.swift in Sources */,
+				AB403A6B1F877112008165BE /* AirTicket.xcdatamodeld in Sources */,
+				AB7576461F87C5E000B39493 /* WeatherManager.swift in Sources */,
+				AB7576631F8809F200B39493 /* DefaultKeysExtention.swift in Sources */,
+				AB7576521F87D9C200B39493 /* ManagerProtocol.swift in Sources */,
+				ABFD951F1F87A27500AE9A82 /* NavMenu.swift in Sources */,
+				AB2DCD581F87780500DA9FFC /* PassangersTableViewCell.swift in Sources */,
+				AB2DCD601F87872000DA9FFC /* TitleView.swift in Sources */,
+				AB7576501F87D67800B39493 /* CityManager.swift in Sources */,
+				AB5505151F88B3C30061670B /* CalendarViewController.swift in Sources */,
+				AB75765B1F87DBCD00B39493 /* UrlRouting.swift in Sources */,
+				AB7576591F87DB4500B39493 /* RequestParams.swift in Sources */,
+				AB2DCD3D1F87727200DA9FFC /* PurchaseRecord.swift in Sources */,
+				AB2DCD501F8777E300DA9FFC /* DirectionsTableViewCell.swift in Sources */,
+				AB2DCD401F87727200DA9FFC /* BaseNavigationController.swift in Sources */,
+				AB7576491F87C70400B39493 /* WeatherCollectionViewCell.swift in Sources */,
+				AB15A6C11F88B58B00527339 /* StringExtension.swift in Sources */,
+				AB2DCD4C1F87756500DA9FFC /* PurchaseViewController.swift in Sources */,
+				AB7576541F87DA1400B39493 /* Reachability.swift in Sources */,
+				ABFD951B1F87A09400AE9A82 /* UIImageExtension.swift in Sources */,
+				AB2DCD541F8777F500DA9FFC /* DatesTableViewCell.swift in Sources */,
+				AB2DCD3B1F87727200DA9FFC /* UIColorExtension.swift in Sources */,
+				AB2DCD3E1F87727200DA9FFC /* AppDelegate.swift in Sources */,
+				AB7576601F88063100B39493 /* CityTableViewCell.swift in Sources */,
+				AB2DCD411F87727200DA9FFC /* BaseViewController.swift in Sources */,
+				AB2DCD3C1F87727200DA9FFC /* UIViewControllerExtension.swift in Sources */,
+				AB2DCD5B1F8781B600DA9FFC /* TicketsViewController.swift in Sources */,
+				AB75765D1F88003300B39493 /* CityRecord.swift in Sources */,
+				AB7576571F87DAF200B39493 /* Utils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB403A721F877112008165BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB403A7B1F877112008165BE /* AirTicketTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB403A7D1F877112008165BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB403A861F877112008165BE /* AirTicketUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AB403A781F877112008165BE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AB403A5E1F877112008165BE /* AirTicket */;
+			targetProxy = AB403A771F877112008165BE /* PBXContainerItemProxy */;
+		};
+		AB403A831F877112008165BE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AB403A5E1F877112008165BE /* AirTicket */;
+			targetProxy = AB403A821F877112008165BE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AB403A6E1F877112008165BE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AB403A6F1F877112008165BE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AB403A881F877112008165BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AB403A891F877112008165BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AB403A8B1F877112008165BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF40C814962106255BA90870 /* Pods-AirTicket.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ZNX957M49C;
+				INFOPLIST_FILE = "$(SRCROOT)/AirTicket/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kuzya.AirTicket;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		AB403A8C1F877112008165BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF4FB558DB9C9531E6A8212D /* Pods-AirTicket.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ZNX957M49C;
+				INFOPLIST_FILE = "$(SRCROOT)/AirTicket/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kuzya.AirTicket;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		AB403A8E1F877112008165BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE802E4EE6C4AEF48C144B58 /* Pods-AirTicketTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = ZNX957M49C;
+				INFOPLIST_FILE = AirTicketTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kuzya.AirTicketTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AirTicket.app/AirTicket";
+			};
+			name = Debug;
+		};
+		AB403A8F1F877112008165BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 880E8410908D79C175E0A9FC /* Pods-AirTicketTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = ZNX957M49C;
+				INFOPLIST_FILE = AirTicketTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kuzya.AirTicketTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AirTicket.app/AirTicket";
+			};
+			name = Release;
+		};
+		AB403A911F877112008165BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF3E7A0D302C70B1AC9DC141 /* Pods-AirTicketUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = ZNX957M49C;
+				INFOPLIST_FILE = AirTicketUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kuzya.AirTicketUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = AirTicket;
+			};
+			name = Debug;
+		};
+		AB403A921F877112008165BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B34FA855059CD5F26EB2C1DC /* Pods-AirTicketUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = ZNX957M49C;
+				INFOPLIST_FILE = AirTicketUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kuzya.AirTicketUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = AirTicket;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AB403A5A1F877111008165BE /* Build configuration list for PBXProject "AirTicket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB403A881F877112008165BE /* Debug */,
+				AB403A891F877112008165BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB403A8A1F877112008165BE /* Build configuration list for PBXNativeTarget "AirTicket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB403A8B1F877112008165BE /* Debug */,
+				AB403A8C1F877112008165BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB403A8D1F877112008165BE /* Build configuration list for PBXNativeTarget "AirTicketTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB403A8E1F877112008165BE /* Debug */,
+				AB403A8F1F877112008165BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB403A901F877112008165BE /* Build configuration list for PBXNativeTarget "AirTicketUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB403A911F877112008165BE /* Debug */,
+				AB403A921F877112008165BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AB403A691F877112008165BE /* AirTicket.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AB403A6A1F877112008165BE /* AirTicket.xcdatamodel */,
+			);
+			currentVersion = AB403A6A1F877112008165BE /* AirTicket.xcdatamodel */;
+			path = AirTicket.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = AB403A571F877111008165BE /* Project object */;
+}
