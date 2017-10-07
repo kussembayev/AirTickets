@@ -15,7 +15,6 @@
 		AB2DCD3C1F87727200DA9FFC /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2DCD2B1F87727200DA9FFC /* UIViewControllerExtension.swift */; };
 		AB2DCD3D1F87727200DA9FFC /* PurchaseRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2DCD2D1F87727200DA9FFC /* PurchaseRecord.swift */; };
 		AB2DCD3E1F87727200DA9FFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2DCD301F87727200DA9FFC /* AppDelegate.swift */; };
-		AB2DCD3F1F87727200DA9FFC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB2DCD311F87727200DA9FFC /* Info.plist */; };
 		AB2DCD401F87727200DA9FFC /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2DCD341F87727200DA9FFC /* BaseNavigationController.swift */; };
 		AB2DCD411F87727200DA9FFC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2DCD351F87727200DA9FFC /* BaseViewController.swift */; };
 		AB2DCD421F87727200DA9FFC /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2DCD361F87727200DA9FFC /* TabBarViewController.swift */; };
@@ -37,8 +36,11 @@
 		AB403A701F877112008165BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB403A6E1F877112008165BE /* LaunchScreen.storyboard */; };
 		AB403A7B1F877112008165BE /* AirTicketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB403A7A1F877112008165BE /* AirTicketTests.swift */; };
 		AB403A861F877112008165BE /* AirTicketUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB403A851F877112008165BE /* AirTicketUITests.swift */; };
+		AB48E0131F88F062001777C8 /* HourlyWeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB48E0111F88F062001777C8 /* HourlyWeatherTableViewCell.swift */; };
+		AB48E0141F88F062001777C8 /* HourlyWeatherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB48E0121F88F062001777C8 /* HourlyWeatherTableViewCell.xib */; };
 		AB5505111F88AE3F0061670B /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5505101F88AE3F0061670B /* UIViewExtension.swift */; };
 		AB5505151F88B3C30061670B /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5505141F88B3C30061670B /* CalendarViewController.swift */; };
+		AB5A81D61F890F290049EBB1 /* PassangerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5A81D51F890F290049EBB1 /* PassangerViewModel.swift */; };
 		AB7576461F87C5E000B39493 /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7576451F87C5E000B39493 /* WeatherManager.swift */; };
 		AB7576491F87C70400B39493 /* WeatherCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7576471F87C70400B39493 /* WeatherCollectionViewCell.swift */; };
 		AB75764A1F87C70400B39493 /* WeatherCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB7576481F87C70400B39493 /* WeatherCollectionViewCell.xib */; };
@@ -116,8 +118,11 @@
 		AB403A811F877112008165BE /* AirTicketUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AirTicketUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB403A851F877112008165BE /* AirTicketUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirTicketUITests.swift; sourceTree = "<group>"; };
 		AB403A871F877112008165BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB48E0111F88F062001777C8 /* HourlyWeatherTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HourlyWeatherTableViewCell.swift; sourceTree = "<group>"; };
+		AB48E0121F88F062001777C8 /* HourlyWeatherTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HourlyWeatherTableViewCell.xib; sourceTree = "<group>"; };
 		AB5505101F88AE3F0061670B /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		AB5505141F88B3C30061670B /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		AB5A81D51F890F290049EBB1 /* PassangerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassangerViewModel.swift; sourceTree = "<group>"; };
 		AB7576451F87C5E000B39493 /* WeatherManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
 		AB7576471F87C70400B39493 /* WeatherCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCollectionViewCell.swift; sourceTree = "<group>"; };
 		AB7576481F87C70400B39493 /* WeatherCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeatherCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -231,6 +236,7 @@
 		AB2DCD321F87727200DA9FFC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AB5A81D41F890F290049EBB1 /* ViewModel */,
 				AB75764B1F87C77E00B39493 /* SingleRowFlowLayout.swift */,
 				AB2DCD5C1F8786FA00DA9FFC /* Common */,
 				AB2DCD331F87727200DA9FFC /* Base */,
@@ -286,6 +292,8 @@
 				AB7576481F87C70400B39493 /* WeatherCollectionViewCell.xib */,
 				AB75765E1F88063100B39493 /* CityTableViewCell.swift */,
 				AB75765F1F88063100B39493 /* CityTableViewCell.xib */,
+				AB48E0111F88F062001777C8 /* HourlyWeatherTableViewCell.swift */,
+				AB48E0121F88F062001777C8 /* HourlyWeatherTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -354,6 +362,14 @@
 				AB403A871F877112008165BE /* Info.plist */,
 			);
 			path = AirTicketUITests;
+			sourceTree = "<group>";
+		};
+		AB5A81D41F890F290049EBB1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AB5A81D51F890F290049EBB1 /* PassangerViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		AB7576551F87DADF00B39493 /* Utilities */ = {
@@ -502,11 +518,11 @@
 				AB2DCD481F87746700DA9FFC /* Registration.storyboard in Resources */,
 				ABFD951D1F87A24800AE9A82 /* NavMenu.xib in Resources */,
 				AB2DCD461F87745C00DA9FFC /* MyTickets.storyboard in Resources */,
+				AB48E0141F88F062001777C8 /* HourlyWeatherTableViewCell.xib in Resources */,
 				AB2DCD511F8777E300DA9FFC /* DirectionsTableViewCell.xib in Resources */,
 				AB75764A1F87C70400B39493 /* WeatherCollectionViewCell.xib in Resources */,
 				AB2DCD591F87780500DA9FFC /* PassangersTableViewCell.xib in Resources */,
 				AB403A6D1F877112008165BE /* Assets.xcassets in Resources */,
-				AB2DCD3F1F87727200DA9FFC /* Info.plist in Resources */,
 				AB2DCD551F8777F500DA9FFC /* DatesTableViewCell.xib in Resources */,
 				AB7576611F88063100B39493 /* CityTableViewCell.xib in Resources */,
 				AB2DCD4A1F87747100DA9FFC /* Purchase.storyboard in Resources */,
@@ -693,6 +709,7 @@
 				AB2DCD3D1F87727200DA9FFC /* PurchaseRecord.swift in Sources */,
 				AB2DCD501F8777E300DA9FFC /* DirectionsTableViewCell.swift in Sources */,
 				AB2DCD401F87727200DA9FFC /* BaseNavigationController.swift in Sources */,
+				AB48E0131F88F062001777C8 /* HourlyWeatherTableViewCell.swift in Sources */,
 				AB7576491F87C70400B39493 /* WeatherCollectionViewCell.swift in Sources */,
 				AB15A6C11F88B58B00527339 /* StringExtension.swift in Sources */,
 				AB2DCD4C1F87756500DA9FFC /* PurchaseViewController.swift in Sources */,
@@ -703,6 +720,7 @@
 				AB2DCD3E1F87727200DA9FFC /* AppDelegate.swift in Sources */,
 				AB7576601F88063100B39493 /* CityTableViewCell.swift in Sources */,
 				AB2DCD411F87727200DA9FFC /* BaseViewController.swift in Sources */,
+				AB5A81D61F890F290049EBB1 /* PassangerViewModel.swift in Sources */,
 				AB2DCD3C1F87727200DA9FFC /* UIViewControllerExtension.swift in Sources */,
 				AB2DCD5B1F8781B600DA9FFC /* TicketsViewController.swift in Sources */,
 				AB75765D1F88003300B39493 /* CityRecord.swift in Sources */,

@@ -25,24 +25,30 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FcQ-PR-yL0">
                                 <rect key="frame" x="53" y="0.0" width="64" height="140"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wGN-Et-RQG">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wGN-Et-RQG">
                                         <rect key="frame" x="8" y="16" width="16" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="16" id="Nb9-u6-gD6"/>
                                             <constraint firstAttribute="height" constant="16" id="idr-0E-vb9"/>
                                         </constraints>
                                         <state key="normal" title="+"/>
+                                        <connections>
+                                            <action selector="incrementPassangerAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="v5m-aO-JBA"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BG5-Vm-QfI">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BG5-Vm-QfI">
                                         <rect key="frame" x="8" y="108" width="16" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="16" id="6nl-6S-6Dh"/>
                                             <constraint firstAttribute="height" constant="16" id="7lp-XN-0xw"/>
                                         </constraints>
                                         <state key="normal" title="-"/>
+                                        <connections>
+                                            <action selector="decrementPassangerAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="tyn-6H-rmh"/>
+                                        </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icn-booking-kid@1x" translatesAutoresizingMaskIntoConstraints="NO" id="PrT-8F-qZp">
-                                        <rect key="frame" x="25" y="60.5" width="20" height="20"/>
+                                        <rect key="frame" x="21" y="60.5" width="20" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="20" id="Jqo-gp-eyz"/>
                                             <constraint firstAttribute="height" constant="20" id="RaP-dH-pi0"/>
@@ -66,24 +72,30 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QUe-52-fuQ">
                                 <rect key="frame" x="125" y="0.0" width="64" height="140"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zTL-C0-CCB">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zTL-C0-CCB">
                                         <rect key="frame" x="8" y="16" width="16" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="16" id="Ajo-tt-y58"/>
                                             <constraint firstAttribute="height" constant="16" id="Nw3-qU-ShZ"/>
                                         </constraints>
                                         <state key="normal" title="+"/>
+                                        <connections>
+                                            <action selector="incrementPassangerAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Ij1-oj-vXn"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qHN-yX-vgE">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qHN-yX-vgE">
                                         <rect key="frame" x="8" y="108" width="16" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="16" id="3SU-oH-Unr"/>
                                             <constraint firstAttribute="height" constant="16" id="egJ-02-2nc"/>
                                         </constraints>
                                         <state key="normal" title="-"/>
+                                        <connections>
+                                            <action selector="decrementPassangerAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="4p2-4Y-1ar"/>
+                                        </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DvZ-Vd-rBG">
-                                        <rect key="frame" x="8" y="55.5" width="11" height="29"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DvZ-Vd-rBG" customClass="SpringLabel" customModule="Spring">
+                                        <rect key="frame" x="8" y="55.5" width="15" height="29"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -110,30 +122,36 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="enb-NF-kWg">
                                 <rect key="frame" x="197" y="0.0" width="64" height="140"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vDB-eg-xps">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vDB-eg-xps">
                                         <rect key="frame" x="8" y="16" width="16" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="Ed3-uI-e0r"/>
                                             <constraint firstAttribute="width" constant="16" id="eWV-dz-vat"/>
                                         </constraints>
                                         <state key="normal" title="+"/>
+                                        <connections>
+                                            <action selector="incrementPassangerAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="A8t-Wi-3kh"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="At0-qP-OlB">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="At0-qP-OlB">
                                         <rect key="frame" x="8" y="108" width="16" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="16" id="Oxd-PI-6RB"/>
                                             <constraint firstAttribute="height" constant="16" id="WAU-gX-jYI"/>
                                         </constraints>
                                         <state key="normal" title="-"/>
+                                        <connections>
+                                            <action selector="decrementPassangerAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="72x-LN-CBH"/>
+                                        </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qha-oC-mAq">
-                                        <rect key="frame" x="8" y="56" width="11" height="29"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qha-oC-mAq" customClass="SpringLabel" customModule="Spring">
+                                        <rect key="frame" x="8" y="56" width="15" height="29"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icn-booking-baby@1x" translatesAutoresizingMaskIntoConstraints="NO" id="gUb-q2-1ac">
-                                        <rect key="frame" x="21.5" y="62" width="16" height="16"/>
+                                        <rect key="frame" x="25" y="62" width="16" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="3Sf-Q1-zZ3"/>
                                             <constraint firstAttribute="width" constant="16" id="rEU-YN-4TJ"/>
@@ -160,14 +178,14 @@
                                     <constraint firstItem="qha-oC-mAq" firstAttribute="centerY" secondItem="enb-NF-kWg" secondAttribute="centerY" id="ndY-YJ-ZWP"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qxs-sP-5Ah">
-                                <rect key="frame" x="61" y="56" width="15" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qxs-sP-5Ah" customClass="SpringLabel" customModule="Spring">
+                                <rect key="frame" x="61" y="56" width="11" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icn-booking-kid@1x" translatesAutoresizingMaskIntoConstraints="NO" id="BUd-hX-EXt">
-                                <rect key="frame" x="146" y="62" width="16" height="16"/>
+                                <rect key="frame" x="150" y="62" width="16" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="16" id="D5U-lF-KdD"/>
                                     <constraint firstAttribute="height" constant="16" id="HSp-vV-h6W"/>
@@ -208,7 +226,10 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="adultPassangerLabel" destination="Qxs-sP-5Ah" id="BAW-0y-zWu"/>
+                <outlet property="babyPassangerLabel" destination="qha-oC-mAq" id="DkL-k9-d8B"/>
                 <outlet property="bgView" destination="Bht-Fu-Wid" id="908-2L-aWP"/>
+                <outlet property="kidPassangerLabel" destination="DvZ-Vd-rBG" id="Ws2-Px-Yu4"/>
             </connections>
         </tableViewCell>
     </objects>

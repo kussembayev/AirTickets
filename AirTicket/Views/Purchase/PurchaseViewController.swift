@@ -48,7 +48,9 @@ class PurchaseViewController: BaseViewController {
     
     // MARK: - Actions
     @IBAction func findTicketsAction(_ sender: Any) {
-        let tempPurchase = PurchaseRecord(origin: "Almaty", destination: "Kaliningrad", departDate: "asdasd", returnDate: "dasdasd", adults: 1, kids: 0, babies: 0)
+        let origin = Defaults[.originCity]
+        let destination = Defaults[.destinationCity]
+        let tempPurchase = PurchaseRecord(origin: origin, destination: destination, departDate: "asdasd", returnDate: "dasdasd", adults: 1, kids: 0, babies: 0)
         performSegue(withIdentifier: ticketsSegue, sender: tempPurchase)
     }
     
@@ -104,10 +106,8 @@ extension PurchaseViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-
 extension PurchaseViewController: DatesTableViewCellDelegate {
     func showCalendar() {
-        printDebug("Show Calendar")
         let vc = CreateVC() as CalendarViewController
         vc.modalPresentationStyle = .overCurrentContext
         vc.modalTransitionStyle = .crossDissolve
@@ -131,4 +131,3 @@ extension PurchaseViewController: CitiesViewControllerDelegate {
                                   with: UITableViewRowAnimation.fade)
     }
 }
-

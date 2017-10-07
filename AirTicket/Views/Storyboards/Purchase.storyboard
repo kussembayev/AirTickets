@@ -103,7 +103,7 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="wey-KA-SQx" id="dPE-AT-Rcd"/>
-                        <outlet property="textField" destination="jzN-x4-wKT" id="NEZ-dA-BNm"/>
+                        <outlet property="textField" destination="jzN-x4-wKT" id="eIx-EU-sYe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8K4-OW-X2a" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -129,7 +129,7 @@
                                     <constraint firstAttribute="height" constant="100" id="26r-U2-lRn"/>
                                 </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JfZ-ph-YH9">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JfZ-ph-YH9">
                                 <rect key="frame" x="0.0" y="172" width="375" height="100"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -152,19 +152,28 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="klY-oz-i0h">
+                                <rect key="frame" x="0.0" y="280" width="375" height="338"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="klY-oz-i0h" firstAttribute="top" secondItem="JfZ-ph-YH9" secondAttribute="bottom" constant="8" id="1fB-Xu-4Ev"/>
                             <constraint firstItem="JfZ-ph-YH9" firstAttribute="top" secondItem="RbF-bi-RZP" secondAttribute="bottom" constant="8" id="2VV-5h-NKJ"/>
                             <constraint firstItem="JfZ-ph-YH9" firstAttribute="leading" secondItem="QkN-oZ-0ue" secondAttribute="leading" id="9pd-hG-wCK"/>
+                            <constraint firstItem="klY-oz-i0h" firstAttribute="leading" secondItem="QkN-oZ-0ue" secondAttribute="leading" id="Fs0-HC-XKV"/>
                             <constraint firstAttribute="trailing" secondItem="RbF-bi-RZP" secondAttribute="trailing" id="Ju8-dW-uEu"/>
                             <constraint firstAttribute="trailing" secondItem="JfZ-ph-YH9" secondAttribute="trailing" id="cbp-A6-gOe"/>
+                            <constraint firstItem="Ees-mg-pQp" firstAttribute="top" secondItem="klY-oz-i0h" secondAttribute="bottom" id="dww-jS-O3B"/>
+                            <constraint firstAttribute="trailing" secondItem="klY-oz-i0h" secondAttribute="trailing" id="iQ4-IU-YgS"/>
                             <constraint firstItem="RbF-bi-RZP" firstAttribute="top" secondItem="XKk-Ya-5vR" secondAttribute="bottom" id="jJF-29-1SD"/>
                             <constraint firstItem="RbF-bi-RZP" firstAttribute="leading" secondItem="QkN-oZ-0ue" secondAttribute="leading" id="quK-cV-bDG"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="JfZ-ph-YH9" id="Oh0-Zm-jfa"/>
+                        <outlet property="tableView" destination="klY-oz-i0h" id="eoN-WT-095"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IV8-9g-42X" userLabel="First Responder" sceneMemberID="firstResponder"/>

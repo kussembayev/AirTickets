@@ -19,8 +19,10 @@ class CitiesViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var tableView: UITableView!
     
+    
     // MARK: - Properties(Private)
     fileprivate var cities = [CityRecord]()
+    fileprivate var filteredCities = [CityRecord]()
     fileprivate let cityCell = "CityTableViewCell"
     fileprivate var city = String()
     
@@ -32,12 +34,19 @@ class CitiesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         textField.becomeFirstResponder()
-        setupTableView() 
+        setupTableView()
+        textField.addTarget(self,
+                            action: #selector(textFieldDidChange(_:)),
+                            for: .editingChanged)
+    }
+    
+    func textFieldDidChange(_ textField: UITextField) {
+        let searchText = textField.text
+        self.filteredCities = cities.filter { ($0.city?.lowercased().contains(searchText!.lowercased()))! }
+        self.tableView.reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
-        
         guard  let directionType = directionType else { return }
         switch directionType {
         case .from:
@@ -51,6 +60,7 @@ class CitiesViewController: UIViewController {
         CityManager.shared.listCities { [unowned self] (result) in
             if let cities = result {
                 self.cities = cities
+                self.filteredCities = cities
                 self.tableView.reloadData()
             }
         }
@@ -76,14 +86,14 @@ extension CitiesViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.cities.count
+        return self.filteredCities.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cityCell,
                                                           for: indexPath) as! CityTableViewCell
-        cell.city = cities[indexPath.row]
+        cell.city = filteredCities[indexPath.row]
         return cell
     }
     
@@ -92,9 +102,9 @@ extension CitiesViewController: UITableViewDelegate, UITableViewDataSource {
         guard  let directionType = directionType else { return }
         switch directionType {
         case .from:
-            Defaults[.originCity] = cities[indexPath.row].city
+            Defaults[.originCity] = filteredCities[indexPath.row].city
         case .to:
-            Defaults[.destinationCity] = cities[indexPath.row].city
+            Defaults[.destinationCity] = filteredCities[indexPath.row].city
         }
         
         self.dismiss(animated: true) { [unowned self] in

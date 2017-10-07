@@ -10,7 +10,7 @@ import UIKit
 
 class SingleRowFlowLayout: UICollectionViewFlowLayout {
     
-    var itemHeight: CGFloat = 80
+    var itemHeight: CGFloat = 100
     var itemWidthVal: CGFloat = 80
     
     override init() {
@@ -32,9 +32,9 @@ class SingleRowFlowLayout: UICollectionViewFlowLayout {
     
     func setupLayout() {
         minimumInteritemSpacing = 1
-        minimumLineSpacing = 10
+        minimumLineSpacing = 0
         scrollDirection = .horizontal
-        sectionInset = UIEdgeInsets(top: 4, left: 15, bottom: 6, right: 15)
+        sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
     
     func itemWidth() -> CGFloat {

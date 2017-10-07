@@ -10,6 +10,8 @@ target 'AirTicket' do
     pod 'Alamofire'
     pod 'SwiftyJSON', '3.0.0'
     pod 'SwiftyUserDefaults'
+    #pod 'RxSwift'
+    #pod 'RxCocoa'
       
     pod 'SwiftMessages'
     pod 'Hero'
